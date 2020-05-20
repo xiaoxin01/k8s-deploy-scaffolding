@@ -1,0 +1,23 @@
+#@ load("@ytt:data", "data")
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: #@ data.values.app_name
+  labels:
+    k8s-app: #@ data.values.app_name
+spec:
+  selector:
+    matchLabels:
+      k8s-app: #@ data.values.app_name
+  template:
+    metadata:
+      labels:
+        k8s-app: #@ data.values.app_name
+    spec:
+      serviceAccountName: #@ data.values.app_name
+      containers:
+      - name: #@ data.values.app_name
+        image: #@ data.values.image
+        resources: #@ data.values.resources

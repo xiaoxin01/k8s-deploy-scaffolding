@@ -1,0 +1,5 @@
+#@data/values
+
+---
+app_name: hello-world
+image:

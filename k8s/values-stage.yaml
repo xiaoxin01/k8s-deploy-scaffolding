@@ -1,0 +1,12 @@
+#@data/values
+
+---
+app_name: hello-world
+image:
+#@overlay/match missing_ok=True
+resources:
+  limits:
+    memory: 240Mi
+  requests:
+    cpu: 100m
+    memory: 100Mi

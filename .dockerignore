@@ -1,0 +1,7 @@
+Dockerfile
+.dockerignore
+README.md
+*.yaml
+*.sh
+*.VERSION*
+k8s/
